@@ -1,0 +1,33 @@
+@import "../bootstrap-4.4.1/scss/bootstrap.css";
+
+$primary-color: #0275d8;
+$text-color-white: #FFF;
+$secondary-backround-color: #FAFAFA;
+$section-padding: 80px;
+
+.dark {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+  background-color: $secondary-backround-color;
+  border-top: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.button {
+  background-color: $primary-color;
+  color: $text-color-white;
+}
+
+.screenreader {
+  display: none;
+}
+
+.contact-message {
+  height: 6rem;
+}
+
+.alert {
+  background-color: #79C879;
+  color: #FFF;
+  display: none;
+}
