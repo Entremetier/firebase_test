@@ -15,7 +15,7 @@ Alerts are available for any length of text, as well as an optional dismiss butt
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
-<div class="alert alert-{{ color.name }}" role="alert">
+<div class="alert-success alert-{{ color.name }}" role="alert">
   A simple {{ color.name }} alert—check it out!
 </div>{% endfor %}
 {% endcapture %}
@@ -29,7 +29,7 @@ Use the `.alert-link` utility class to quickly provide matching colored links wi
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
-<div class="alert alert-{{ color.name }}" role="alert">
+<div class="alert-success alert-{{ color.name }}" role="alert">
   A simple {{ color.name }} alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
 </div>{% endfor %}
 {% endcapture %}
@@ -40,7 +40,7 @@ Use the `.alert-link` utility class to quickly provide matching colored links wi
 Alerts can also contain additional HTML elements like headings, paragraphs and dividers.
 
 {% capture example %}
-<div class="alert alert-success" role="alert">
+<div class="alert-success alert-success" role="alert">
   <h4 class="alert-heading">Well done!</h4>
   <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
   <hr>
@@ -63,7 +63,7 @@ Using the alert JavaScript plugin, it's possible to dismiss any alert inline. He
 You can see this in action with a live demo:
 
 {% capture example %}
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
+<div class="alert-success alert-warning alert-dismissible fade show" role="alert">
   <strong>Holy guacamole!</strong> You should check in on some of those fields below.
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>

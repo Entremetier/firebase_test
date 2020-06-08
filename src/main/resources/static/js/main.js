@@ -15,7 +15,6 @@ firebase.initializeApp(firebaseConfig);
 let messagesRef = firebase.database().ref('messages');
 
 //Listen for form submit
-
 document.getElementById('contactform').addEventListener('submit', submitForm);
 
 //Submit form
@@ -32,11 +31,11 @@ function submitForm(e) {
     saveMessage(name, email, company, message);
 
     //Show alert
-    document.querySelector('.alert').style.display = 'block';
+    document.querySelector('.alert-success').style.display = 'block';
 
     //Hide alert after 3 seconds
     setTimeout(function () {
-        document.querySelector('.alert').style.display = 'none';
+        document.querySelector('.alert-success').style.display = 'none';
     }, 3000);
 
     document.getElementById('contactform').reset();
@@ -57,3 +56,29 @@ function saveMessage(name, email, company, message) {
         message: message
     });
 }
+
+// //Get Message with ID
+// messagesRef.on('value', gotData, errData);
+//
+// function gotData(data) {
+//    // console.log(data.val());
+//     let contact = data.val();
+//     let keys = Object.keys(contact);
+//     console.log(keys);
+//     for (let i = 0; i < keys.length; i++){
+//         let key = keys[i];
+//         let name = contact[key].name;
+//         let email = contact[key].email;
+//         let company = contact[key].company;
+//         let message = contact[key].message;
+//         console.log('Name: ' + name + ' Email: ' + email + ' Company: ' + company + ' Message: ' + message);
+//     }
+// }
+//
+// function errData(err) {
+//     console.log('Error!');
+//     console.log(err);
+// }
+//
+//
+// //Display Message

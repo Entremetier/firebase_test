@@ -26,8 +26,16 @@ $section-padding: 80px;
   height: 6rem;
 }
 
-.alert {
+.outputMessage{
+  height: 60rem;
+}
+
+.alert-success {
   background-color: #79C879;
   color: #FFF;
   display: none;
+}
+
+.hint{
+  font-size: .7rem;
 }

@@ -35,7 +35,7 @@ $(function () {
 
   QUnit.test('should fade element out on clicking .close', function (assert) {
     assert.expect(1)
-    var alertHTML = '<div class="alert alert-danger fade show">' +
+    var alertHTML = '<div class="alert-success alert-danger fade show">' +
         '<a class="close" href="#" data-dismiss="alert">×</a>' +
         '<p><strong>Holy guacamole!</strong> Best check yo self, you\'re not looking too good.</p>' +
         '</div>'
@@ -50,17 +50,17 @@ $(function () {
   QUnit.test('should remove element when clicking .close', function (assert) {
     assert.expect(2)
     var done = assert.async()
-    var alertHTML = '<div class="alert alert-danger fade show">' +
+    var alertHTML = '<div class="alert-success alert-danger fade show">' +
         '<a class="close" href="#" data-dismiss="alert">×</a>' +
         '<p><strong>Holy guacamole!</strong> Best check yo self, you\'re not looking too good.</p>' +
         '</div>'
     var $alert = $(alertHTML).appendTo('#qunit-fixture').bootstrapAlert()
 
-    assert.notEqual($('#qunit-fixture').find('.alert').length, 0, 'element added to dom')
+    assert.notEqual($('#qunit-fixture').find('.alert-success').length, 0, 'element added to dom')
 
     $alert
       .one('closed.bs.alert', function () {
-        assert.strictEqual($('#qunit-fixture').find('.alert').length, 0, 'element removed from dom')
+        assert.strictEqual($('#qunit-fixture').find('.alert-success').length, 0, 'element removed from dom')
         done()
       })
       .find('.close')
@@ -70,7 +70,7 @@ $(function () {
   QUnit.test('should not fire closed when close is prevented', function (assert) {
     assert.expect(1)
     var done = assert.async()
-    $('<div class="alert"/>')
+    $('<div class="alert-success"/>')
       .on('close.bs.alert', function (e) {
         e.preventDefault()
         assert.ok(true, 'close event fired')

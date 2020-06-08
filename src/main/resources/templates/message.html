@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="/css/styles.css" rel="stylesheet" media="screen"/>
+
+    <title>Show Message</title>
+</head>
+<body>
+
+<section id="contact" class="dark">
+
+    <div class="container">
+
+        <form id="messageForm">
+            <div class="row">
+                <h4 class="col-6 text-center mb-3">Aktuelle Keys</h4>
+                <ol id="keylist" class="col-6 text-center mb-3">
+                </ol>
+            </div>
+
+            <div class="col-6">
+                <label for="id">ID</label>
+                <input class="form-control mb-3" type="text" name="id" id="id">
+            </div>
+
+            <div class="text-center col-6">
+                <button class="btn btn-primary mb-5" type="submit" name="submit-button">Nachricht anzeigen</button>
+                <button class="btn btn-primary mb-5" type="submit" name="submit-button">Log out</button>
+            </div>
+        </form>
+
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6">
+                <label>Name</label>
+                <label class="form-control mb-3" id="outputName" type="text"></label>
+
+                <label>E-Mail-Adresse</label>
+                <label class="form-control mb-3" id="outputEmail" type="text"></label>
+
+                <label>Firma</label>
+                <label class="form-control mb-3 mb-sm-3 mb-md-0" id="outputCompany" type="text"></label>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6">
+                <label>Nachricht</label>
+                <label class="form-control outputMessage" id="outputMessage" type="text"></label>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-database.js"></script>
+
+<script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="bootstrap-4.4.1/dist/js/bootstrap.min.js"></script>
+<script src="/js/displayMessage.js"></script>
+
+</body>
+</html>
