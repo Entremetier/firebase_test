@@ -1,11 +1,11 @@
 // Your web app's Firebase configuration
 var firebaseConfig = {
-    apiKey: "AIzaSyAPu99dYCZD2ZYertwnVZ9fh_0OiY_x7_M",
+    apiKey: "",
     authDomain: "contact-form-96065.firebaseapp.com",
     databaseURL: "https://contact-form-96065.firebaseio.com",
     projectId: "contact-form-96065",
     storageBucket: "contact-form-96065.appspot.com",
-    messagingSenderId: "405674194627",
+    messagingSenderId: "",
     appId: "1:405674194627:web:4209b0e6944bd91f7a9476"
 };
 // Initialize Firebase
