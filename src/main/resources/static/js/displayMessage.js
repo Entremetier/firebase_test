@@ -1,16 +1,14 @@
-// Your web app's Firebase configuration
-const firebaseConfig = {
-    apiKey: "AIzaSyAc4l40LqRVHpPaPIRkAbWw-qJniRUz9zw",
-    authDomain: "contactform-3cbed.firebaseapp.com",
-    databaseURL: "https://contactform-3cbed.firebaseio.com",
-    projectId: "contactform-3cbed",
-    storageBucket: "contactform-3cbed.appspot.com",
-    messagingSenderId: "202199187053",
-    appId: "1:202199187053:web:d4a5d20968bb9c0e528964"
+var firebaseConfig = {
+    apiKey: "AIzaSyAPu99dYCZD2ZYertwnVZ9fh_0OiY_x7_M",
+    authDomain: "contact-form-96065.firebaseapp.com",
+    databaseURL: "https://contact-form-96065.firebaseio.com",
+    projectId: "contact-form-96065",
+    storageBucket: "contact-form-96065.appspot.com",
+    messagingSenderId: "405674194627",
+    appId: "1:405674194627:web:4209b0e6944bd91f7a9476"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-
 
 
 //Creating database, with name messages, on the fly
@@ -31,7 +29,7 @@ function submitForm(e) {
 
     //Get Values
     id = getInputVal('id');
-    //console.log("Die ID: " + id);
+    console.log("Die ID: " + id);
 
 //Get Message with ID
     messagesRef.on('value', gotData, errData);
